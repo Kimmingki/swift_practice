@@ -17,14 +17,14 @@ struct Todo: Codable, Equatable {
     var isToday: Bool
     
     mutating func update(isDone: Bool, detail: String, isToday: Bool) {
-        // [0]TODO: update 로직 추가
+        // [x] TODO: update 로직 추가
         self.isDone = isDone
         self.detail = detail
         self.isToday = isToday
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
-        // [0]TODO: 동등 조건 추가
+        // [x] TODO: 동등 조건 추가
         return lhs.id == rhs.id
     }
 }
@@ -38,20 +38,20 @@ class TodoManager {
     var todos: [Todo] = []
     
     func createTodo(detail: String, isToday: Bool) -> Todo {
-        // [0]TODO: create로직 추가
+        // [x] TODO: create로직 추가
         let nextId = TodoManager.lastId + 1
         TodoManager.lastId = nextId
         return Todo(id: nextId, isDone: false, detail: detail, isToday: isToday)
     }
     
     func addTodo(_ todo: Todo) {
-        // [0]TODO: add로직 추가
+        // [x] TODO: add로직 추가
         todos.append(todo)
         saveTodo()
     }
     
     func deleteTodo(_ todo: Todo) {
-        // [0]TODO: delete 로직 추가
+        // [x] TODO: delete 로직 추가
 //        if let index = todos.firstIndex(of: todo) {
 //            todos.remove(at: index)
 //        }
@@ -64,7 +64,7 @@ class TodoManager {
     }
     
     func updateTodo(_ todo: Todo) {
-        // [0]TODO: updatee 로직 추가
+        //TODO: updatee 로직 추가
         guard let index = todos.firstIndex(of: todo) else { return }
         todos[index].update(isDone: todo.isDone, detail: todo.detail, isToday: todo.isToday)
         saveTodo()

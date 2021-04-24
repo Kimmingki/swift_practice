@@ -18,7 +18,7 @@ class TodoListViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     
-    // [0] TODO: TodoViewModel 만들기
+    // [x] TODO: TodoViewModel 만들기
     let todoListViewModel = TodoViewModel()
     
     override func viewDidLoad() {
@@ -27,9 +27,8 @@ class TodoListViewController: UIViewController {
         // TODO: 키보드 디텍션
         
         
-        // [0] TODO: 데이터 불러오기
+        // TODO: 데이터 불러오기
         todoListViewModel.loadTasks()
-        
     }
     
     @IBAction func isTodayButtonTapped(_ sender: Any) {
@@ -56,12 +55,12 @@ extension TodoListViewController {
 
 extension TodoListViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // [0] TODO: 섹션 몇개
+        // [x] TODO: 섹션 몇개
         return todoListViewModel.numOfSection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // [0] TODO: 섹션별 아이템 몇개
+        // [x] TODO: 섹션별 아이템 몇개
         if section == 0 {
             return todoListViewModel.todayTodos.count
         } else {
@@ -74,15 +73,15 @@ extension TodoListViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         var todo: Todo
+        
         if indexPath.section == 0 {
             todo = todoListViewModel.todayTodos[indexPath.item]
         } else {
             todo = todoListViewModel.upcompingTodos[indexPath.item]
         }
-        cell.updateUI(todo: todo)
         
-        // [0] TODO: 커스텀 셀
-        // [0] TODO: todo 를 이용해서 updateUI
+        // [x] TODO: 커스텀 셀
+        // [x] TODO: todo 를 이용해서 updateUI
         // [] TODO: doneButtonHandler 작성
         // [] TODO: deleteButtonHandler 작성
         return cell
@@ -139,7 +138,7 @@ class TodoListCell: UICollectionViewCell {
     }
     
     func updateUI(todo: Todo) {
-        // TODO: 셀 업데이트 하기
+        // [x] TODO: 셀 업데이트 하기
         checkButton.isSelected = todo.isDone
         descriptionLabel.text = todo.detail
         descriptionLabel.alpha = todo.isDone ? 0.2 : 1
@@ -156,18 +155,24 @@ class TodoListCell: UICollectionViewCell {
     }
     
     func reset() {
-        // TODO: reset로직 구현
-        
+        // [x] TODO: reset로직 구현
+        descriptionLabel.alpha = 1
+        deleteButton.isHidden = true
+        showStrikeThrough(false)
     }
     
     @IBAction func checkButtonTapped(_ sender: Any) {
-        // TODO: checkButton 처리
-        
-
+        // [x] TODO: checkButton 처리
+        checkButton.isSelected = !checkButton.isSelected
+        let isDone = checkButton.isSelected
+        showStrikeThrough(isDone)
+        descriptionLabel.alpha = isDone ? 0.2 : 1
+        deleteButton.isHidden = !isDone
+        doneButtonTapHandler?(isDone)
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        // TODO: deleteButton 처리 
+        // [x] TODO: deleteButton 처리 
         deleteButtonTapHandler?()
     }
 }
