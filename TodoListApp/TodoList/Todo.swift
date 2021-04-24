@@ -38,22 +38,36 @@ class TodoManager {
     var todos: [Todo] = []
     
     func createTodo(detail: String, isToday: Bool) -> Todo {
-        //TODO: create로직 추가
-        return Todo(id: 1, isDone: false, detail: "2", isToday: true)
+        // [0]TODO: create로직 추가
+        let nextId = TodoManager.lastId + 1
+        TodoManager.lastId = nextId
+        return Todo(id: nextId, isDone: false, detail: detail, isToday: isToday)
     }
     
     func addTodo(_ todo: Todo) {
-        //TODO: add로직 추가
+        // [0]TODO: add로직 추가
+        todos.append(todo)
+        saveTodo()
     }
     
     func deleteTodo(_ todo: Todo) {
-        //TODO: delete 로직 추가
-        
+        // [0]TODO: delete 로직 추가
+//        if let index = todos.firstIndex(of: todo) {
+//            todos.remove(at: index)
+//        }
+        // 현재 방대한 데이터가 아니기 때문에 위 코드와 밑 코드의 차이점은 없지만 위 코드가 효율적이다.
+        // 퍼포먼스가 큰 상황이 아닌 이상 가독성이 더 괜찮은 코드를 쓰는 것도 나쁘지 않다.
+        todos = todos.filter { existingTodo in
+            return existingTodo.id != todo.id
+        }
+        saveTodo()
     }
     
     func updateTodo(_ todo: Todo) {
-        //TODO: updatee 로직 추가
-        
+        // [0]TODO: updatee 로직 추가
+        guard let index = todos.firstIndex(of: todo) else { return }
+        todos[index].update(isDone: todo.isDone, detail: todo.detail, isToday: todo.isToday)
+        saveTodo()
     }
     
     func saveTodo() {
