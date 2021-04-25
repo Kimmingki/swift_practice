@@ -18,8 +18,8 @@ class TodoListViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     
-    // [x] TODO: TodoViewModel 만들기
-    let todoListViewModel = TodoViewModel()
+    // TODO: TodoViewModel 만들기
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class TodoListViewController: UIViewController {
         
         
         // TODO: 데이터 불러오기
-        todoListViewModel.loadTasks()
+        
     }
     
     @IBAction func isTodayButtonTapped(_ sender: Any) {
@@ -55,35 +55,25 @@ extension TodoListViewController {
 
 extension TodoListViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // [x] TODO: 섹션 몇개
-        return todoListViewModel.numOfSection
+        // TODO: 섹션 몇개
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // [x] TODO: 섹션별 아이템 몇개
-        if section == 0 {
-            return todoListViewModel.todayTodos.count
-        } else {
-            return todoListViewModel.upcompingTodos.count
-        }
+        // TODO: 섹션별 아이템 몇개
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // TODO: 커스텀 셀
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoListCell", for: indexPath) as? TodoListCell else {
             return UICollectionViewCell()
         }
-        var todo: Todo
+        return cell
         
-        if indexPath.section == 0 {
-            todo = todoListViewModel.todayTodos[indexPath.item]
-        } else {
-            todo = todoListViewModel.upcompingTodos[indexPath.item]
-        }
-        
-        // [x] TODO: 커스텀 셀
-        // [x] TODO: todo 를 이용해서 updateUI
-        // [] TODO: doneButtonHandler 작성
-        // [] TODO: deleteButtonHandler 작성
+        // TODO: todo 를 이용해서 updateUI
+        // TODO: doneButtonHandler 작성
+        // TODO: deleteButtonHandler 작성
         return cell
     }
     
@@ -108,10 +98,8 @@ extension TodoListViewController: UICollectionViewDataSource {
 
 extension TodoListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // [ 0 ]TODO: 사이즈 계산하기
-        let width: CGFloat = collectionView.bounds.width
-        let height: CGFloat = 50
-        return CGSize(width: width, height: height)
+        // TODO: 사이즈 계산하기
+        return CGSize.zero
     }
 }
 
@@ -138,7 +126,7 @@ class TodoListCell: UICollectionViewCell {
     }
     
     func updateUI(todo: Todo) {
-        // [x] TODO: 셀 업데이트 하기
+        // TODO: 셀 업데이트 하기
         checkButton.isSelected = todo.isDone
         descriptionLabel.text = todo.detail
         descriptionLabel.alpha = todo.isDone ? 0.2 : 1
@@ -155,24 +143,18 @@ class TodoListCell: UICollectionViewCell {
     }
     
     func reset() {
-        // [x] TODO: reset로직 구현
-        descriptionLabel.alpha = 1
-        deleteButton.isHidden = true
-        showStrikeThrough(false)
+        // TODO: reset로직 구현
+        
     }
     
     @IBAction func checkButtonTapped(_ sender: Any) {
-        // [x] TODO: checkButton 처리
-        checkButton.isSelected = !checkButton.isSelected
-        let isDone = checkButton.isSelected
-        showStrikeThrough(isDone)
-        descriptionLabel.alpha = isDone ? 0.2 : 1
-        deleteButton.isHidden = !isDone
-        doneButtonTapHandler?(isDone)
+        // TODO: checkButton 처리
+        
+
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        // [x] TODO: deleteButton 처리 
+        // TODO: deleteButton 처리 
         deleteButtonTapHandler?()
     }
 }
