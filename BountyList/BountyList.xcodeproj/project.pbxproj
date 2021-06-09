@@ -7,31 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65048E472625E20900014674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65048E462625E20900014674 /* AppDelegate.swift */; };
-		65048E492625E20900014674 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65048E482625E20900014674 /* SceneDelegate.swift */; };
-		65048E4E2625E20900014674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65048E4C2625E20900014674 /* Main.storyboard */; };
-		65048E502625E20C00014674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65048E4F2625E20C00014674 /* Assets.xcassets */; };
-		65048E532625E20C00014674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65048E512625E20C00014674 /* LaunchScreen.storyboard */; };
-		65048E5D2625E31700014674 /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65048E5C2625E31700014674 /* BountyViewController.swift */; };
-		6589DCDB26286CE900ECEDF7 /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589DCDA26286CE900ECEDF7 /* BountyInfo.swift */; };
-		65E0240226271EF100C038AF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E0240126271EF100C038AF /* DetailViewController.swift */; };
+		65E3551D26711088000888FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3551C26711088000888FC /* AppDelegate.swift */; };
+		65E3551F26711088000888FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3551E26711088000888FC /* SceneDelegate.swift */; };
+		65E3552426711088000888FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E3552226711088000888FC /* Main.storyboard */; };
+		65E3552626711089000888FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E3552526711089000888FC /* Assets.xcassets */; };
+		65E3552926711089000888FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E3552726711089000888FC /* LaunchScreen.storyboard */; };
+		65E35531267110C8000888FC /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E35530267110C8000888FC /* BountyViewController.swift */; };
+		65E35533267129B6000888FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E35532267129B6000888FC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65048E432625E20900014674 /* BountyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BountyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		65048E462625E20900014674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65048E482625E20900014674 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		65048E4D2625E20900014674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		65048E4F2625E20C00014674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		65048E522625E20C00014674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		65048E542625E20C00014674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65048E5C2625E31700014674 /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
-		6589DCDA26286CE900ECEDF7 /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
-		65E0240126271EF100C038AF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		65E3551926711088000888FC /* BountyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BountyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E3551C26711088000888FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65E3551E26711088000888FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		65E3552326711088000888FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65E3552526711089000888FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65E3552826711089000888FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65E3552A26711089000888FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E35530267110C8000888FC /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
+		65E35532267129B6000888FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		65048E402625E20900014674 /* Frameworks */ = {
+		65E3551626711088000888FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,34 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		65048E3A2625E20900014674 = {
+		65E3551026711088000888FC = {
 			isa = PBXGroup;
 			children = (
-				65048E452625E20900014674 /* BountyList */,
-				65048E442625E20900014674 /* Products */,
+				65E3551B26711088000888FC /* BountyList */,
+				65E3551A26711088000888FC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		65048E442625E20900014674 /* Products */ = {
+		65E3551A26711088000888FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65048E432625E20900014674 /* BountyList.app */,
+				65E3551926711088000888FC /* BountyList.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		65048E452625E20900014674 /* BountyList */ = {
+		65E3551B26711088000888FC /* BountyList */ = {
 			isa = PBXGroup;
 			children = (
-				65048E462625E20900014674 /* AppDelegate.swift */,
-				65048E482625E20900014674 /* SceneDelegate.swift */,
-				65048E5C2625E31700014674 /* BountyViewController.swift */,
-				6589DCDA26286CE900ECEDF7 /* BountyInfo.swift */,
-				65E0240126271EF100C038AF /* DetailViewController.swift */,
-				65048E4C2625E20900014674 /* Main.storyboard */,
-				65048E4F2625E20C00014674 /* Assets.xcassets */,
-				65048E512625E20C00014674 /* LaunchScreen.storyboard */,
-				65048E542625E20C00014674 /* Info.plist */,
+				65E3551C26711088000888FC /* AppDelegate.swift */,
+				65E3551E26711088000888FC /* SceneDelegate.swift */,
+				65E35530267110C8000888FC /* BountyViewController.swift */,
+				65E35532267129B6000888FC /* DetailViewController.swift */,
+				65E3552226711088000888FC /* Main.storyboard */,
+				65E3552526711089000888FC /* Assets.xcassets */,
+				65E3552726711089000888FC /* LaunchScreen.storyboard */,
+				65E3552A26711089000888FC /* Info.plist */,
 			);
 			path = BountyList;
 			sourceTree = "<group>";
@@ -76,13 +73,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65048E422625E20900014674 /* BountyList */ = {
+		65E3551826711088000888FC /* BountyList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65048E572625E20C00014674 /* Build configuration list for PBXNativeTarget "BountyList" */;
+			buildConfigurationList = 65E3552D26711089000888FC /* Build configuration list for PBXNativeTarget "BountyList" */;
 			buildPhases = (
-				65048E3F2625E20900014674 /* Sources */,
-				65048E402625E20900014674 /* Frameworks */,
-				65048E412625E20900014674 /* Resources */,
+				65E3551526711088000888FC /* Sources */,
+				65E3551626711088000888FC /* Frameworks */,
+				65E3551726711088000888FC /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,24 +87,24 @@
 			);
 			name = BountyList;
 			productName = BountyList;
-			productReference = 65048E432625E20900014674 /* BountyList.app */;
+			productReference = 65E3551926711088000888FC /* BountyList.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		65048E3B2625E20900014674 /* Project object */ = {
+		65E3551126711088000888FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					65048E422625E20900014674 = {
-						CreatedOnToolsVersion = 12.4;
+					65E3551826711088000888FC = {
+						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = 65048E3E2625E20900014674 /* Build configuration list for PBXProject "BountyList" */;
+			buildConfigurationList = 65E3551426711088000888FC /* Build configuration list for PBXProject "BountyList" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,57 +112,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 65048E3A2625E20900014674;
-			productRefGroup = 65048E442625E20900014674 /* Products */;
+			mainGroup = 65E3551026711088000888FC;
+			productRefGroup = 65E3551A26711088000888FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65048E422625E20900014674 /* BountyList */,
+				65E3551826711088000888FC /* BountyList */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		65048E412625E20900014674 /* Resources */ = {
+		65E3551726711088000888FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65048E532625E20C00014674 /* LaunchScreen.storyboard in Resources */,
-				65048E502625E20C00014674 /* Assets.xcassets in Resources */,
-				65048E4E2625E20900014674 /* Main.storyboard in Resources */,
+				65E3552926711089000888FC /* LaunchScreen.storyboard in Resources */,
+				65E3552626711089000888FC /* Assets.xcassets in Resources */,
+				65E3552426711088000888FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		65048E3F2625E20900014674 /* Sources */ = {
+		65E3551526711088000888FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6589DCDB26286CE900ECEDF7 /* BountyInfo.swift in Sources */,
-				65048E472625E20900014674 /* AppDelegate.swift in Sources */,
-				65048E5D2625E31700014674 /* BountyViewController.swift in Sources */,
-				65048E492625E20900014674 /* SceneDelegate.swift in Sources */,
-				65E0240226271EF100C038AF /* DetailViewController.swift in Sources */,
+				65E3551D26711088000888FC /* AppDelegate.swift in Sources */,
+				65E35531267110C8000888FC /* BountyViewController.swift in Sources */,
+				65E3551F26711088000888FC /* SceneDelegate.swift in Sources */,
+				65E35533267129B6000888FC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		65048E4C2625E20900014674 /* Main.storyboard */ = {
+		65E3552226711088000888FC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				65048E4D2625E20900014674 /* Base */,
+				65E3552326711088000888FC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		65048E512625E20C00014674 /* LaunchScreen.storyboard */ = {
+		65E3552726711089000888FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				65048E522625E20C00014674 /* Base */,
+				65E3552826711089000888FC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -173,7 +169,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		65048E552625E20C00014674 /* Debug */ = {
+		65E3552B26711089000888FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -224,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -234,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		65048E562625E20C00014674 /* Release */ = {
+		65E3552C26711089000888FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,7 +285,7 @@
 			};
 			name = Release;
 		};
-		65048E582625E20C00014674 /* Debug */ = {
+		65E3552E26711089000888FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -307,7 +303,7 @@
 			};
 			name = Debug;
 		};
-		65048E592625E20C00014674 /* Release */ = {
+		65E3552F26711089000888FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -328,25 +324,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65048E3E2625E20900014674 /* Build configuration list for PBXProject "BountyList" */ = {
+		65E3551426711088000888FC /* Build configuration list for PBXProject "BountyList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65048E552625E20C00014674 /* Debug */,
-				65048E562625E20C00014674 /* Release */,
+				65E3552B26711089000888FC /* Debug */,
+				65E3552C26711089000888FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65048E572625E20C00014674 /* Build configuration list for PBXNativeTarget "BountyList" */ = {
+		65E3552D26711089000888FC /* Build configuration list for PBXNativeTarget "BountyList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65048E582625E20C00014674 /* Debug */,
-				65048E592625E20C00014674 /* Release */,
+				65E3552E26711089000888FC /* Debug */,
+				65E3552F26711089000888FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 65048E3B2625E20900014674 /* Project object */;
+	rootObject = 65E3551126711088000888FC /* Project object */;
 }

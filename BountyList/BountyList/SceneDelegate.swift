@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  BountyList
 //
-//  Created by 김민기 on 2021/04/13.
+//  Created by 김민기 on 2021/06/10.
 //
 
 import UIKit
