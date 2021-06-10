@@ -106,14 +106,45 @@
                                     <action selector="close:" destination="6IL-mf-Mk4" eventType="touchUpInside" id="RnY-F7-BAu"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="52J-5a-0qq">
+                                <rect key="frame" x="50" y="100" width="314" height="448.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="52J-5a-0qq" secondAttribute="height" multiplier="7:10" id="Jh0-zG-X6O"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMp-P7-TW5">
+                                <rect key="frame" x="134.5" y="650.5" width="145" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luffy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9Y-mX-T5B">
+                                <rect key="frame" x="174" y="588.5" width="66.5" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Mu-kl-rph"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="52J-5a-0qq" firstAttribute="leading" secondItem="1Mu-kl-rph" secondAttribute="leading" constant="50" id="16g-Qu-0Hg"/>
+                            <constraint firstItem="52J-5a-0qq" firstAttribute="top" secondItem="1Mu-kl-rph" secondAttribute="top" constant="100" id="2ro-JH-pmU"/>
+                            <constraint firstItem="rMp-P7-TW5" firstAttribute="top" secondItem="M9Y-mX-T5B" secondAttribute="bottom" constant="30" id="9C6-WZ-yyN"/>
+                            <constraint firstItem="M9Y-mX-T5B" firstAttribute="top" secondItem="52J-5a-0qq" secondAttribute="bottom" constant="40" id="9ZR-6S-DdE"/>
                             <constraint firstItem="1Mu-kl-rph" firstAttribute="trailing" secondItem="Wad-Fm-MhT" secondAttribute="trailing" constant="16" id="N6u-7N-e6P"/>
+                            <constraint firstItem="52J-5a-0qq" firstAttribute="centerX" secondItem="1Mu-kl-rph" secondAttribute="centerX" id="O93-Hj-Odd"/>
+                            <constraint firstItem="rMp-P7-TW5" firstAttribute="centerX" secondItem="M9Y-mX-T5B" secondAttribute="centerX" id="Pf6-uG-Xs2"/>
                             <constraint firstItem="Wad-Fm-MhT" firstAttribute="top" secondItem="1Mu-kl-rph" secondAttribute="top" constant="20" id="Seb-Rt-yBB"/>
+                            <constraint firstItem="M9Y-mX-T5B" firstAttribute="centerX" secondItem="52J-5a-0qq" secondAttribute="centerX" id="Shs-Ow-IA1"/>
+                            <constraint firstItem="1Mu-kl-rph" firstAttribute="trailing" secondItem="52J-5a-0qq" secondAttribute="trailing" constant="50" id="wiw-8U-hhE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bountyLabel" destination="rMp-P7-TW5" id="Jkk-An-HOM"/>
+                        <outlet property="imgView" destination="52J-5a-0qq" id="rzN-1V-tNR"/>
+                        <outlet property="nameLabel" destination="M9Y-mX-T5B" id="863-5X-20t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0II-Ef-dBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
