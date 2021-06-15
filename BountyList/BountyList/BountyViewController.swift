@@ -2,7 +2,8 @@
 //  BountyViewController.swift
 //  BountyList
 //
-//  Created by 김민기 on 2021/06/10.
+//  Created by joonwon lee on 2020/03/04.
+//  Copyright © 2020 com.joonwon. All rights reserved.
 //
 
 import UIKit
@@ -13,32 +14,27 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     
     // Model
     // - BountyInfo
-    // > BountyInfo 만들기
+    // > BountyInfo 만들자
     
     // View
     // - ListCell
-    // > ListCell 필요한 정보를 ViewModel한테서 받기
-    // > ListCell은 ViewModel로부터 받은 정보로 View 업데이트 하기
+    // > ListCell 필요한 정보를 ViewModel한테서 받아야겠다
+    // > ListCell은 ViewModel로 부터 받은 정보로 뷰 업데이트 하기
     
     // ViewModel
     // - BountyViewModel
-    // > BountyViewModel을 만들기, 뷰레이어에서 필요한 메서드 만들기
-    // > Model 가지고 있기, BountyInfo 들
+    // > BountyViewModel을 만들고, 뷰레이어에서 필요한 메서드 만들기
+    // > 모델 가지고 있기 ,, BountyInfo 들
     
-    
-    // viewModel에 들어있는 Model 가져오기
     let viewModel = BountyViewModel()
     
-    
-    // performSegue 실행 전 준비 사항
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // DetailViewController로 데이터 넘기기
+        // DetailViewController 데이터 줄꺼에요
         if segue.identifier == "showDetail" {
             let vc = segue.destination as? DetailViewController
-            
             if let index = sender as? Int {
+
                 let bountyInfo = viewModel.bountyInfo(at: index)
-                // DetailViewController로 데이터 넘겨주기
                 vc?.viewModel.update(model: bountyInfo)
             }
         }
@@ -48,37 +44,28 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
     }
     
-    // UITableViewDataSource -> 테이블을 몇 개 생성 할 것이냐
+    // UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        // 갯수를 수동으로 넣지 않고 count를 이용해 갯수 파악
-        // viewModel을 이용하여 갯수를 가져오기
         return viewModel.numOfBountyInfoList
     }
     
-    // UITableViewDelegate -> 테이블을 어떻게 보여줄 것이냐
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else {
             return UITableViewCell()
-            // UITableViewCell 말고 ListCell을 쓰고 싶은데 혹시 값이 없을 수 있으니 옵셔널로 적용
         }
+        
         let bountyInfo = viewModel.bountyInfo(at: indexPath.row)
         cell.update(info: bountyInfo)
         return cell
     }
     
-    // UITableViewDelegate -> 클릭 됐을 때 어떻게 반응할 것인가
+    // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("--> \(indexPath.row)")
-        
-        // 연결 된 세그웨이를 수행해라
-        performSegue(withIdentifier: "showDetail", sender: indexPath.row) // 몇번째 cell인지 보내기
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
 }
 
-
-// Custom Cell 만들기
 class ListCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -91,10 +78,7 @@ class ListCell: UITableViewCell {
     }
 }
 
-
-// ViewModel 만들기
 class BountyViewModel {
-    // ViewModel은 Model과 접근해야한다.
     let bountyInfoList: [BountyInfo] = [
         BountyInfo(name: "brook", bounty: 33000000),
         BountyInfo(name: "chopper", bounty: 50),
@@ -106,9 +90,8 @@ class BountyViewModel {
         BountyInfo(name: "zoro", bounty: 120000000)
     ]
     
-    // 랭킹 순으로 나열
     var sortedList: [BountyInfo] {
-        let sortedList = bountyInfoList.sorted { prev, next in
+        let sortedList = bountyInfoList.sorted { prev, next  in
             return prev.bounty > next.bounty
         }
         
@@ -119,7 +102,7 @@ class BountyViewModel {
         return bountyInfoList.count
     }
     
-    func bountyInfo(at index: Int) -> BountyInfo{
+    func bountyInfo(at index: Int) -> BountyInfo {
         return sortedList[index]
     }
 }

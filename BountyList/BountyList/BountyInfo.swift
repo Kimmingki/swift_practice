@@ -2,7 +2,8 @@
 //  BountyInfo.swift
 //  BountyList
 //
-//  Created by 김민기 on 2021/06/14.
+//  Created by joonwon lee on 2020/03/07.
+//  Copyright © 2020 com.joonwon. All rights reserved.
 //
 
 import UIKit
