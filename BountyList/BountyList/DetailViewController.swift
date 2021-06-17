@@ -30,13 +30,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bountyLabel: UILabel!
-
+    @IBOutlet weak var nameLabelCenterX: NSLayoutConstraint!
+    @IBOutlet weak var bountyLabelCenterX: NSLayoutConstraint!
+    
+    
     let viewModel = DetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear()
+    }
+    
     
     func updateUI() {
         if let bountyInfo = viewModel.bountyInfo {
