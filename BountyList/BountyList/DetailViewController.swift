@@ -49,21 +49,30 @@ class DetailViewController: UIViewController {
     
     // 애니메이션을 보여주기 위한 준비
     private func prepareAnimation() {
-        nameLabelCenterX.constant = view.bounds.width
-        bountyLabelCenterX.constant = view.bounds.width
+        nameLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
+        bountyLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
+        nameLabel.alpha = 0
+        bountyLabel.alpha = 0
+        
     }
     
     // 애니메이션을 어떻게 보여줄 것인가
     private func showAnimation() {
-        nameLabelCenterX.constant = 0
-        bountyLabelCenterX.constant = 0
-        
-        // 어떤 식으로 진행 할 것인가
-        UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
-            self.view.layoutIfNeeded()
+        // nameLabel 애니메이션 (따로 움직이는 것 처럼 보이기 위해)
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
+            // identity를 이용하면 변경하기 전으로 돌아갈 수 있다.
+            self.nameLabel.transform = CGAffineTransform.identity
+            self.nameLabel.alpha = 1
         }, completion: nil)
         
-        // 이미지 플립 시키기
+        // bountyLabel 애니메이션 (따로 움직이는 것 처럼 보이기 위해)
+        UIView.animate(withDuration: 1, delay: 0.2, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
+            // identity를 이용하면 변경하기 전으로 돌아갈 수 있다.
+            self.bountyLabel.transform = CGAffineTransform.identity
+            self.bountyLabel.alpha = 1
+        }, completion: nil)
+        
+        // 이미지 애니메이션
         UIView.transition(with: imgView, duration: 0.3, options: .transitionFlipFromTop, animations: nil, completion: nil)
     }
     
