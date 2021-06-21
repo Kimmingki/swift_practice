@@ -39,10 +39,32 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        prepareAnimation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear()
+        super.viewDidAppear(animated)
+        showAnimation()
+    }
+    
+    // 애니메이션을 보여주기 위한 준비
+    private func prepareAnimation() {
+        nameLabelCenterX.constant = view.bounds.width
+        bountyLabelCenterX.constant = view.bounds.width
+    }
+    
+    // 애니메이션을 어떻게 보여줄 것인가
+    private func showAnimation() {
+        nameLabelCenterX.constant = 0
+        bountyLabelCenterX.constant = 0
+        
+        // 어떤 식으로 진행 할 것인가
+        UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        // 이미지 플립 시키기
+        UIView.transition(with: imgView, duration: 0.3, options: .transitionFlipFromTop, animations: nil, completion: nil)
     }
     
     
