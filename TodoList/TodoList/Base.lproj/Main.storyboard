@@ -93,10 +93,10 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="90"/>
                                         <connections>
-                                            <outlet property="checkButton" destination="3WF-UV-HWy" id="hvn-bL-Pya"/>
-                                            <outlet property="deleteButton" destination="QJ9-j4-CFT" id="UHs-PX-yrb"/>
-                                            <outlet property="descriptionLabel" destination="08j-Gj-d6W" id="Xjn-0z-wpI"/>
-                                            <outlet property="strikeThroughView" destination="1EQ-iP-ReF" id="qw7-LI-qpI"/>
+                                            <outlet property="checkButton" destination="3WF-UV-HWy" id="iU5-Lz-eln"/>
+                                            <outlet property="deleteButton" destination="QJ9-j4-CFT" id="h9E-4Z-Tqw"/>
+                                            <outlet property="descriptionLabel" destination="08j-Gj-d6W" id="oHo-WK-fEE"/>
+                                            <outlet property="strikeThroughView" destination="1EQ-iP-ReF" id="AFx-Wd-lK0"/>
                                             <outlet property="strikeThroughWidth" destination="zTB-dq-GI4" id="ahh-Qe-iqI"/>
                                         </connections>
                                     </collectionViewCell>
