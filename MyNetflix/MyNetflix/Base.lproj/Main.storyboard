@@ -210,9 +210,6 @@
                             <constraint firstItem="n9k-jk-E7Q" firstAttribute="trailing" secondItem="DU6-n1-nBQ" secondAttribute="trailing" id="o8U-bm-X4g"/>
                             <constraint firstItem="DU6-n1-nBQ" firstAttribute="leading" secondItem="n9k-jk-E7Q" secondAttribute="leading" id="x6n-3q-UkO"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="aKk-os-WGT" appends="YES" id="01r-Ly-vPB"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" id="UWE-ky-SQF"/>
                     <connections>
@@ -221,7 +218,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vi-cu-R4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="aKk-os-WGT"/>
             </objects>
             <point key="canvasLocation" x="1214.4927536231885" y="989.73214285714278"/>
         </scene>

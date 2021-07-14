@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 class SearchViewController: UIViewController {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultCollectionView: UICollectionView!
     
@@ -42,13 +42,25 @@ extension SearchViewController: UICollectionViewDataSource {
         // 외부 코드 가져다 쓰기
         // SPM (swift package manager), Cocoa Pod, Carthage
         cell.movieThumbnail.kf.setImage(with: url)
-    
         return cell
     }
 }
 
 extension SearchViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // movie
+        // player vc
+        // player vc + movie
+        // presenting player vc
+        
+        let movie = movies[indexPath.item]
+        
+        let sb = UIStoryboard(name: "Player", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "PlayerViewController") as! PlayerViewController
+        vc.modalPresentationStyle = .fullScreen
+        
+        present(vc, animated: false, completion: nil)
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
@@ -115,7 +127,8 @@ class SearchAPI {
         
         let dataTask = session.dataTask(with: requestURL) { data, response, error in
             let successRange = 200..<300
-            guard error == nil, let statusCode = (response as? HTTPURLResponse)?.statusCode,
+            guard error == nil,
+                  let statusCode = (response as? HTTPURLResponse)?.statusCode,
                   successRange.contains(statusCode) else {
                 completion([])
                 return
