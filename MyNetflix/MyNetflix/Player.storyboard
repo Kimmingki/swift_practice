@@ -78,7 +78,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="closeBtn" destination="86n-Rz-yj0" id="Ram-s6-Ced"/>
                         <outlet property="controllView" destination="Ve8-2L-57x" id="icq-fy-w8H"/>
                         <outlet property="playBtn" destination="H7P-VR-3tU" id="RsH-zM-tpa"/>
                         <outlet property="playerView" destination="nRb-cW-4Xf" id="UhP-XB-S6c"/>

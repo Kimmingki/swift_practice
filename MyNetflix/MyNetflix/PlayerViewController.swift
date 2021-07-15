@@ -14,7 +14,6 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var playerView: PlayerView!
     @IBOutlet weak var controllView: UIView!
     @IBOutlet weak var playBtn: UIButton!
-    @IBOutlet weak var closeBtn: UIButton!
     
     let player = AVPlayer()
     
@@ -24,13 +23,39 @@ class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerView.player = player
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        play()
     }
     
     @IBAction func togglePlayBtn(_ sender: Any) {
-        playBtn.isSelected = !playBtn.isSelected
+        if player.isPlaying {
+            pause()
+        } else {
+            play()
+        }
+    }
+    
+    func play() {
+        player.play()
+        playBtn.isSelected = true
+    }
+    
+    func pause() {
+        player.pause()
+        playBtn.isSelected = false
+    }
+    
+    func reset() {
+        pause()
+        player.replaceCurrentItem(with: nil)
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
+        reset()
         dismiss(animated: false, completion: nil)
     }
 }

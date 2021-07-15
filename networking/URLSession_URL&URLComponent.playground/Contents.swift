@@ -2,7 +2,7 @@ import UIKit
 
 
 // URL
-let urlString = "https://itunes.apple.com/search?media=music&entity=song&term=Gdragon"
+let urlString = "https://itunes.apple.com/search?media=movie&entity=movie&term=Dark knight"
 let url = URL(string: urlString)
 
 url?.absoluteString
